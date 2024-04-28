@@ -106,6 +106,9 @@ header nav ul {
   margin: 0 auto;
   list-style-type: none;
 }
+header nav ul li {
+  flex-shrink: 0;
+}
 header nav ul li a {
   font-size: 32px;
   display: block;
@@ -123,19 +126,10 @@ header nav ul li a:hover {
     padding: 25px;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 480px) {
   header nav ul li a {
-    font-size: 18px;
-    padding: 15px;
-  }
-}
-@media all and (max-width: 768px) {
-  header nav ul {
-    flex-direction: column;
-  }
-  header nav ul li a {
-    font-size: 18px;
-    padding: 15px;
+    font-size: 14px;
+    padding: 10px;
   }
 }
 #mobileToolbar {
@@ -1266,7 +1260,15 @@ body {
 }
 @media all and (max-width: 768px) {
   .wrapper {
-    padding: 125px 0 0;
+    padding: 100px 0 0;
+  }
+  .wrapper.alert-message .wrapper__box {
+    padding: 220px 0 0;
+  }
+}
+@media all and (max-width: 480px) {
+  .wrapper {
+    padding: 60px 0 0;
   }
   .wrapper.alert-message .wrapper__box {
     padding: 220px 0 0;

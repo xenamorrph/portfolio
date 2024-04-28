@@ -487,6 +487,9 @@
   }
 }
 @media all and (max-width: 480px) {
+  .intro__container {
+    min-height: auto;
+  }
   .intro__right {
     flex-direction: column;
   }
