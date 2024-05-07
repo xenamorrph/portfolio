@@ -1,6 +1,4 @@
-console.log('dds');
-
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function () {
   tabsSwap('.projects', '.projects__toggle', '.projects__tab');
   initSlider('.projects__container', '.projects__pagination');
 });
@@ -28,7 +26,7 @@ const tabsSwap = (section, toggle, tab) => {
 const initSlider = (sliderClass, pagination) => {
   const sliderArr = document.querySelectorAll(sliderClass);
 
-  if (sliderArr.length){
+  if (sliderArr.length) {
     sliderArr.forEach((element, index) => {
       let id = sliderClass.replace('.', '') + '_' + index;
       let paginationId = pagination.replace('.', '') + '_' + index;
@@ -39,10 +37,10 @@ const initSlider = (sliderClass, pagination) => {
       const resizableSwiper = (breakpoint, swiperClass, swiperSettings) => {
         let swiper;
         breakpoint = window.matchMedia(breakpoint);
-        const enableSwiper = function(className, settings) {
+        const enableSwiper = function (className, settings) {
           swiper = new Swiper(className, settings);
         }
-        const checker = function() {
+        const checker = function () {
           if (breakpoint.matches) {
             return enableSwiper(swiperClass, swiperSettings);
           } else {
